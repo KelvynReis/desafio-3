@@ -1,0 +1,128 @@
+@import url(global.css);
+@import url(header.css);
+
+
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 0;
+
+    @media (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+main .container-section-services {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+
+    @media (min-width: 768px) {
+        padding: 2rem 6rem;
+        flex-direction: row;
+        gap: 0;
+    }
+}
+
+.content-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 20px;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.75rem;
+    }
+}
+
+.service-card {
+    border-bottom: 1px solid white;
+    padding: 20px;
+    width: 100%;
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    & .service-id {
+        color: var(--text-secondary);
+    }
+
+    & .service-header i {
+        background-color: var(--text-secondary);
+        color: var(--bg-primary);
+    }
+
+    & .service-content h3 {
+        color: var(--text-secondary);
+    }
+
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px var(--color-primary);
+}
+
+.text-outline:hover {
+    -webkit-text-stroke: 1px var(--color-secondary);
+}
+
+.service-id {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.service-id:hover {
+    color: var(--color-secondary);
+}
+
+.service-header i {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    color: black
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.service-content h3 {
+    font-size: 1.625rem;
+    color: var(--color-primary);
+
+    @media (min-width: 768px) {
+        font-size: 2.625rem;
+    }
+}
+
+.service-content p {
+    font-size: 1;
+    color: var(--color-primary);
+}

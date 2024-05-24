@@ -6,6 +6,7 @@ main {
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: .5rem 0;
 
@@ -29,6 +30,23 @@ main .container-section-main {
         padding: 2rem 6rem;
         flex-direction: row;
         gap: 0;
+    }
+}
+
+.typing-animation::after {
+    content: "|";
+    animation: blink-caret 0.75s infinite alternate;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
     }
 }
 

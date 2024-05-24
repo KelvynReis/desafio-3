@@ -51,3 +51,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+const text = "Kelvyn Reis";
+const speed = 100;
+
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typedText").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  } else {
+    document.querySelector(".typing-animation").style.display = "inline-block";
+  }
+}
+
+setTimeout(typeWriter, 1000);

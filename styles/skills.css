@@ -1,0 +1,91 @@
+@import url(global.css);
+@import url(header.css);
+
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 0;
+
+    @media (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+.skills-section {
+    padding: 3.125rem 0;
+}
+
+.container-skills {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills-section h2 {
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 9.375rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    ;
+    transition: transform 0.3s;
+}
+
+.skill i {
+    font-size: 3rem;
+    color: #333;
+}
+
+.skill h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.skill:hover {
+    transform: scale(1.1);
+
+    &:hover {
+        color: var(--text-secondary);
+    }
+}
+
+.skill.html:hover i {
+    color: #e34c26;
+}
+
+.skill.css:hover i {
+    color: #264de4;
+}
+
+.skill.javascript:hover i {
+    color: #f0db4f;
+}
+
+.skill.react:hover i {
+    color: #61dbfb;
+}
+
+.skill.nodejs:hover i {
+    color: #68a063;
+}
+
+
+
+.skill h3 {
+    margin-top: 0.625rem;
+    font-size: 1.125rem;
+    color: var(--primary-color);
+}
